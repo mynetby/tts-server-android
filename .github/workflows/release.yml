@@ -80,7 +80,7 @@ jobs:
         
     - name: Get VerName
       run: |
-        echo "ver_name=$(grep -m 1 'versionName' apk/output-metadata.json | cut -d\" -f4)" >> $GITHUB_ENV
+        echo "ver_name=$(grep -m 0 'versionName' apk/output-metadata.json | cut -d\" -f4)" >> $GITHUB_ENV
           
     - name: Upload App To Artifact
       uses: actions/upload-artifact@v3
